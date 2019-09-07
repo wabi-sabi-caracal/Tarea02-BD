@@ -146,12 +146,21 @@ respuesta. En caso de que alguna pregunta no se cumpla en el diagrama actual,
 indica las modificaciones que deberían hacerse para que se permita dicho 
 comportamiento.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{/home/taniarubi/Documentos/Tarea02-BD/modelo.jpg}
+\end{figure}
+
 \begin{itemize}
+    % Ejercicio 1.
     \item ¿Un cliente puede tener un número ilimitado de planes?
+
+    \textsc{Solución: }
     \item ¿Un cliente puede existir sin un plan?
     \item ¿Es posible crear un plan sin saber quién es el cliente?
     \item ¿El operador quiere limitar los tipos de dispositivos que se pueden 
     vincular a un tipo de plan específico?
+    % Ejercicio 5.
     \item ¿Es posible mantener los datos relativos a un teléfono sin conectarlo
     a un plan?
     \item ¿Puede un teléfono puede asociar a varios planes?
@@ -160,12 +169,41 @@ comportamiento.
     incluido en la figura?
     \item ¿La empresa es capaz de realizar un seguimiento de un fabricante sin 
     mantener información sobre sus teléfonos?
+    % Ejercicio 9.
+    \item ¿El mismo sistema operativo se puede utilizar en mútiples tipos de  
+    dispositivos? 
+
+    \textsc{Solución:} No. La parte azul del diagrama nos muestra que la 
+    relación es de uno a muchos: \textit{un tipo de teléfono tiene varios 
+    sistemas operativos.} 
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.4]{/home/taniarubi/Documentos/Tarea02-BD/modelo9.jpg}
+    \end{figure}
+
+    Para hacer la modificación, lo que tenemos que hacer es una relación $m:1$, 
+    donde \textit{el mismo sistema operativo utiliza varios tipos de teléfono}.
+    Esto se representa de la forma
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.4]{/home/taniarubi/Documentos/Tarea02-BD/modelo9i.jpg}
+    \end{figure}
+
+    % Ejercicio 10.
     \item Hay dos relaciones entre el Cliente y el Plan. Explicar en qué 
     difieren.
+
+    % Ejercicio 11.
     \item Caracterizar el grado y la cardinalidad de la relación que une al 
     cliente a sí mismo. Explicar su significado.
+
+    % Ejercicio 12.
     \item ¿Es posible vincular un teléfono a un cliente específico en un plan 
     con múltiples clientes?
+
+    % Ejercicio 13.
     \item ¿Puede la compañía rastrear un teléfono sin identificar sus sistema 
     operativo?
 \end{itemize}

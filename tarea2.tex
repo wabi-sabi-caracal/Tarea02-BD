@@ -54,13 +54,20 @@
     \textbf{si son posibles o no}, justificando tu respuesta. Cuando no sea 
     posible deberás indicar alguna recomendación al respecto.
 
-    ¿Un \textbf{atributo compuesto} puede ser llave? ¿Un \textbf{atributo
-    multivaluado} puede ser \textbf{llave}? ¿Un \textbf{atributo derivado}
-    puede ser \textbf{llave}? ¿Un \textbf{atributo multivaluado} puede ser 
-    \textbf{compuesto}? ¿Un \textbf{atributo multivaluado} puede ser 
-    \textbf{derivado}? ¿Qué implicaría la existencia de una \textbf{entidad}
-    cuyos atributos sean \textbf{todos derivados}?  
-    
+    ¿Un \textbf{atributo compuesto} puede ser llave? \\
+	\textsc{Solución:} Sí puede ser llave pero solo cuando todos sus componentes lo son, así cada entidad puede ser identificada por un conjunto de llaves.\\
+    ¿Un \textbf{atributo multivaluado} puede ser \textbf{llave}?\\
+	\textsc{Solución:} Sí puede ser, porque la entidad a la que corresponda ese atributo puede ser identificada por más de una sola llave.\\
+    ¿Un \textbf{atributo derivado} puede ser \textbf{llave}?\\
+	\textsc{Solución:} Sí puede serlo si la forma en que se calcula o deriva devuelva un valor único del dominio del atributo, así todas llaves identifican a una entidad.\\
+    ¿Un \textbf{atributo multivaluado} puede ser \textbf{compuesto}?\\
+	\textsc{Solución:} No puede serlo, podría ocurruri redundancia si dos entidades tienen los mismos valores del dominio del atributo. Sería recomendable transformar el atributo en una nueva entidad con sus respectivos atributos y relacionar las entidades incluyendo una nueva relación total de muchos a muchos.\\
+    ¿Un \textbf{atributo multivaluado} puede ser \textbf{derivado}?\\
+	\textsc{Solución:} No puede serlo pues el derivado se obtiene con ciertos parámetros y en un principio con los mismos parámetros deberían obtenerse los mismos resultados, por lo tanto no es posible tener varios valores para un atributo derivado. Sería recomendable modificar el modelo para no necesitar hacer muchos cálculos para un mismo atributo o hacer nuevos atributos derivados para cada cosa que se necesita calcular.\\
+    ¿Qué implicaría la existencia de una \textbf{entidad} cuyos atributos sean \textbf{todos derivados}? \\
+	\textsc{Solución:} Implicaría que la entidad depende completamente de otras entidades y sus relaciones con ellas.
+
+
     \item[iii.] Explica el concepto de \text{agregación} en el 
     \textbf{modelo E/R} y proporciona un par de ejemplos.
 

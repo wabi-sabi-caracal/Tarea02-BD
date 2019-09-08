@@ -14,6 +14,7 @@
 \usepackage{enumerate}
 \usepackage{ragged2e}
 \usepackage{mathtools}
+\usepackage{float}
 % Soporte para referencias y citas
 \usepackage{hyperref}
 % Soporte para imágenes.
@@ -62,6 +63,69 @@
     
     \item[iii.] Explica el concepto de \text{agregación} en el 
     \textbf{modelo E/R} y proporciona un par de ejemplos.
+
+    La agregación es una abstracción mediante la cual las relaciones 
+    son tratadas como un conjunto de entidades de alto nivel. Se 
+    representa como un conjunto de entidades y relaciones encerradas 
+    en un recuadro.
+
+    \begin{itemize}
+        \item  \textbf{Ejemplo 1:}
+        
+               Queremos registrar en una base de datos información acerca 
+               de los cursos que se enseñan en una escuela donde cada 
+               curso puede ser enseñado por muchos profesores y en él 
+               se pueden inscribir muchos alumnos. 
+
+               \begin{figure}[h]
+                \centering
+                \includegraphics[scale=0.6]{./imagenes/Ejemplo1.jpg}
+                \end{figure}
+
+               Y queremos tener un reporte de evaluación del
+               progreso del curso después de cada periodo de examenes, 
+               por lo que necesitamos saber los alumnos y profesores 
+               involucrados en el curso, también necesitamos saber 
+               la secretaria que realizo el reporte. 
+               
+               \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{./imagenes/Ejemplo1a.jpg}
+                \end{figure} 
+
+               Nos conviene utilizar agregación ya que nos 
+               permite relacionar evaluación con la entidad 
+               secretaria y la entidad creada por la agregación (clase)
+               sin crear una relación rendudante o compleja con la que
+               no podríamos relacionar directamente secretaria.
+
+              
+            
+            \item \textbf{Ejemplo 2:}
+            
+            Queremos registrar en una base de datos información acerca 
+            de máquinas que se utilizan en una fabrica donde cada máquina 
+            puede ser ocupada por varios trabajadores.
+
+            \begin{figure}[h]
+             \centering
+             \includegraphics[scale=0.6]{./imagenes/Ejemplo2.jpg}
+             \end{figure}
+
+            Queremos tener un balance cada tres meses del estado de las 
+            máquinas por lo que se necesita saber los trabajadores que 
+            las utilizan y tener la información del contador que lo realizo. 
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{./imagenes/Ejemplo2a.jpg}
+                \end{figure}
+
+            Utilizando agregación nos permite relacionar  con la entidad 
+            contador y la entidad creada por la agregación sin crear 
+            relaciones rendudantes o complejas.
+
+        \end{itemize}
 
     \item[iv.] Diseña una base de datos que represete los conceptos revisados 
     para crear un \textbf{diagrama E/R} (no consideres el Modelo E/R extendido).
@@ -166,6 +230,7 @@
               que realiza el seguimiento. Un satélite puede monitorear varios 
               elementos. De los satélites se desea almacenar su identificador, 
               nombre y descripción
+    \end{itemize}
 \end{itemize}
 
 \section{Ingeniería inversa}

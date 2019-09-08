@@ -132,6 +132,40 @@
     \end{itemize}
 
     \item[b.] \textbf{Sistema de información geográfica} 
+    La \textbf{Secretaría del Medio Ambiente y Recursos Naturales (SEMARNAT)} 
+    desea crear un \textbf{SIG} (Sistema de Información Geográfica) para acceso
+    público a través de internet. El sistema ofrecerá la siguiente información:
+
+    \begin{itemize}
+        \item Datos referentes a \textbf{ríos, sistemas montañosos, montañas y
+              municipios} donde se localizan.
+        \item De los \textbf{ríos} se almacenará un identifacador del río, nombre, 
+              descripción y longitud total. Para cada río, además, se almacenarán 
+              los municipios que atraviesa la longitud del tramo del río para cada 
+              municipio bañado.
+        \item De los \textbf{municipios} se almacenará un identificador para 
+              el municipi, nombre, y número de habitantes.
+        \item Los \textbf{ríos} pueden ser afluentes de otros ríos, si es el caso,
+              se desea conocer a cuál río alimentan y el municipio en el que se unen 
+              al río del que son afluentes.
+        \item En cuanto a los \textbf{sistemas montañosos} se almacenará un código, 
+              el nombre, la orientación (norte, sur, este, oeste), la longitud, la 
+              altura máxima y los municipios que ocupa. Los sistemas están formados 
+              por \textbf{montañas} de los que se almacena un código, un nombre, 
+              descripción y altura. Se debe considerar que una montaña solo 
+              pertenecerá a un sistema montañoso. Se requiere también almacenar 
+              el municipio o municipios en lo que se encuentra, ya que hay casos 
+              en los que una montaña es compartida por varios municipios.
+        \item Las \textbf{montañas} además pueden tener un \textbf{origen volcánico} 
+              o de \textbf{plegamiento}. En el caso de que su origen sea volcánico, 
+              se desea almacenar el tipo de volcán y si es de plagamiento, se desea
+              almacenará el periodo geológico de dicho plegamiento. 
+        \item \textbf{Algunos ríos} y \textbf{montañas} son elementos geológicos 
+              \textbf{monitoreados por satélite}. De dichos elementos se desea 
+              alamcenar la fecha en la que se comienza a monitorear y el satélite 
+              que realiza el seguimiento. Un satélite puede monitorear varios 
+              elementos. De los satélites se desea almacenar su identificador, 
+              nombre y descripción
 \end{itemize}
 
 \section{Ingeniería inversa}

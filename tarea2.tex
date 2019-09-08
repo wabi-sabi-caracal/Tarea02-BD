@@ -256,7 +256,7 @@ comportamiento.
 
     \textsc{Solución:} Sí. La zona rosa nos dice que hay una relación $1:m$ 
     donde \textit{un cliente tiene varios tipos de planes} ya que 
-    \textit{Un plan pertence a varios tipos de plan}. Entonces, si el 
+    \textit{Un plan pertence a un tipo de plan}. Entonces, si el 
     cliente lo desea, puede llegar a tener una infinidad de planes.
 
     \begin{figure}[h]
@@ -269,6 +269,20 @@ comportamiento.
     
     % Ejercicio 3.
     \item ¿Es posible crear un plan sin saber quién es el cliente?
+    
+    No. Porque la participación de plan es total en las relaciones \textit{poseer} 
+    y \textit{administrar} por lo que cada plan debe relacionarse con al menos 
+    un cliente. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{./imagenes/modelo3a.jpg}
+    \end{figure}
+    Para que sea posible la participación de plan debería se parcial para que 
+    se pueda crear un plan si saber quién es el cliente.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{./imagenes/modelo3b.jpg}
+    \end{figure}
 
     % Ejercicio 4.
     \item ¿El operador quiere limitar los tipos de dispositivos que se pueden 

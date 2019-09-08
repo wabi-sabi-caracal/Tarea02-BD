@@ -270,15 +270,15 @@ comportamiento.
     % Ejercicio 3.
     \item ¿Es posible crear un plan sin saber quién es el cliente?
     
-    No. Porque la participación de plan es total en las relaciones \textit{poseer} 
-    y \textit{administrar} por lo que cada plan debe relacionarse con al menos 
-    un cliente. 
+    No debido a que la participación de plan es total en las relaciones \textit{poseer} 
+    y \textit{administrar} por lo que \textit{cada plan debe relacionarse con al menos 
+    un cliente}. 
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.4]{./imagenes/modelo3a.jpg}
     \end{figure}
-    Para que sea posible la participación de plan debería se parcial para que 
-    se pueda crear un plan si saber quién es el cliente.
+    Para que sea posible crear un plan si saber quién es el cliente la participación
+    de plan debería se parcial.
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.4]{./imagenes/modelo3b.jpg}
@@ -301,6 +301,21 @@ comportamiento.
     \item Supongamos que existe un tipo de teléfono que puede utilizar múltiples
     sistemas operativos. ¿Esta situación podría tener cabida dentro del modelo 
     incluido en la figura?
+
+    No, porque la relación \textit{tener} es $n:1$ donde \textit{varios tipos de 
+    telefonos tienen solo un sistema operativo}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{./imagenes/modelo7a.jpg}
+    \end{figure}
+
+    Para que esto ocurra debemos cambiar la cardinalidad de la relación 
+    \textit{tener} de $n:1$ a $n:m$.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{./imagenes/modelo7b.jpg}
+    \end{figure}
 
     % Ejercicio 8.
     \item ¿La empresa es capaz de realizar un seguimiento de un fabricante sin 

@@ -273,7 +273,9 @@ comportamiento.
     
     % Ejercicio 2.
     \item ¿Un cliente puede existir sin un plan?
-    
+
+    \textsc{Solución:} Sí. La relación \textit{poseer} relaciona las entidades \textit{Cliente} y \textit{Plan} donde la participación de la entidad \textit{Cliente} es parcial, por lo tanto puede existir algún cliente que no posee un plan. 
+
     % Ejercicio 3.
     \item ¿Es posible crear un plan sin saber quién es el cliente?
     
@@ -303,6 +305,8 @@ comportamiento.
 
     % Ejercicio 6.
     \item ¿Puede un teléfono puede asociar a varios planes?
+
+    \textsc{Solución:} No. La entidad \textit{Teléfono} y la entidad \textit{Plan} se asocian con la relación \textit{Incluir} que es una relación uno a muchos, por lo tanto un teléfono está asociado a lo más a un solo plan, pero un plan sí puede estar asociado a muchos teléfonos o a ninguno. Cambiar la cardinalidad de la relación \textit{Incluir} a la de una relación muchos a muchos nos permitiría asociar un teléfono a más de un plan.
     
     % Ejercicio 7.
     \item Supongamos que existe un tipo de teléfono que puede utilizar múltiples
@@ -354,6 +358,10 @@ comportamiento.
     % Ejercicio 10.
     \item Hay dos relaciones entre el Cliente y el Plan. Explicar en qué 
     difieren.
+
+    \textsc{Solución:} La relación \textit{poseer} nos permite asociar a todos los planes con algunos clientes, hay clientes que pueden no poseer un plan pero a todos los planes los posee un cliente, además un mismo cliente puede poseer varios planes y un mismo plan puede ser posesión de varios clientes.
+La relación \textit{administrar} relaciona a todos los clientes con todos los planes, todos los planes son administrados por un solo cliente y todos los clientes pueden admnistrar varios planes.
+La diferencia entre ambas relaciones está en su cardinalidad y la participación de las entidades \textit{Cliente} y \textit{Plan} en cada una. 
 
     % Ejercicio 11.
     \item Caracterizar el grado y la cardinalidad de la relación que une al 

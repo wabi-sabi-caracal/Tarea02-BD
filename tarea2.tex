@@ -68,8 +68,12 @@
 	\textsc{Solución:} Implicaría que la entidad depende completamente de otras entidades y sus relaciones con ellas.
 
 
+<<<<<<< HEAD
 
     \item[iii.] Explica el concepto de \text{agregación} en el
+=======
+    \item[iii.] Explica el concepto de \text{agregación} en el 
+>>>>>>> 538d699b5f127129f2bd8ea9717032529d5933b9
     \textbf{modelo E/R} y proporciona un par de ejemplos.
 
     La agregación es una abstracción mediante la cual las relaciones
@@ -205,6 +209,30 @@
         deben almacenar todos los envíos encargados por el cliente.
     \end{itemize}
 
+\textsc{Solución:}\\
+Las decisiones y consideraciones que asumimos en nuestro diseño fueron las siguientes:
+
+\textbf{-Entidades:}
+\begin{itemize}
+    \item Para representar los tipos de vehículos creamos las entidades \textbf{Moto}, \textbf{Van} y \textbf{Avión} que heredan de una entidad \textbf{Vehículo}. A la entidad \textbf{Vehículo} le agregamos el atributo \textbf{IDVehículo} como llave.
+    \item Para saber si la mercancía se envía al interior de la república creamos la entidad débil \textbf{DelInterior} que cuenta con su identificador único \textbf{IDDelInterior}. Esta entidad nos ayudará a asociar mercancía a un avión y a su moto o van.
+    \item Como la mercancía puede ser enviada en sobres o paquetes creamos las entidades \textbf{Sobre} y \textbf{Paquete} que heredan de la entidad \textbf{Mercancía} y tienen sus atributos correspondientes.
+    \item Creamos la entidad \textbf{Destinatario} para representar los destinatarios pues creemos que no necesitamos de tanta información sobre el destinatario como la que necesitamos del cliente que hace el envío. Así, como atributos de destinatarios incluimos solamente \textbf{Teléfono} , \textbf{Dirección} y \textbf{IDDestinatario} como su identificador único. No incluimos un nombre pues depende de si es una empresa o un particular el que recibe el envío.
+   \item Las entidades \textbf{Empresa} y \textbf{Particular} heredan tanto de \textbf{Cliente} como de \textbf{Destinatario} ya que pueden tener alguno de esos roles en la entrega de un paquete, por lo tanto es un caso de herencia múltiple y usamos una categoría total para representarla.
+\end{itemize}
+
+\textbf{- Relaciones:}
+\begin{itemize}
+    \item Para relacionar a \textbf{Supervisor} con \textbf{Vehículo} usamos la relación \textbf{Supervisar} que tiene como atributo \textbf{Transportes} que es el que almacena los vehículos que son supervisados por un supervisor.
+    \item La relación \textbf{Asignar} de las entidades \textbf{DelInterior} y \textbf{Avión} es la que se encarga de la asignación de la mercancía que va al interior de la república a un avión. La relación débil \textbf{Ser} relaciona la mercancía que va al interior de la república con algún tipo de mercancía (sobres o paquetes) y así, como \textbf{Sobre} y \textbf{Paquete} tienen asignados su moto o van correspondiente, la mercancía que va al interior de la república también tiene asignada una moto o van para la entrega final.
+    \item En la relación \textbf{Enviar} participan las entidades \textbf{Cliente}, \textbf{Mercancía} y \textbf{Destinatario} pues un cliente envía mercancía a un destinatario. El atributo \textbf{Fecha} almacena la fecha de envío, el atributo \textbf{Intentos} tiene el número de veces que se ha intentado entregar la mercancía y el atributo calculado \textbf{Total} guarda el total que se cobra al cliente por el envío, se calcula tomando en cuenta el precio de la mercancía que se envía, el destino y el número de intentos en los que no se ha conseguido realizar la entrega.
+\end{itemize}
+
+ \begin{figure}[H]
+ \centering
+ \includegraphics[scale=0.666]{./imagenes/Ejercicio2a.jpeg}
+ \end{figure}
+
     \item[b.] \textbf{Sistema de información geográfica}
     La \textbf{Secretaría del Medio Ambiente y Recursos Naturales (SEMARNAT)}
     desea crear un \textbf{SIG} (Sistema de Información Geográfica) para acceso
@@ -241,11 +269,12 @@
               que realiza el seguimiento. Un satélite puede monitorear varios
               elementos. De los satélites se desea almacenar su identificador,
               nombre y descripción.
-              \textbf{Entidades:}\\\\
-        \includegraphics[width= 15 cm]{imagenes/2b.png}
 
+        \textsc{Solución:}\\
         Las decisiones y consideraciones que asumimos en nuestro diseño fueron
-        las siguientes:
+        las siguientes:\\
+
+       \textbf{Entidades:}
        \begin{itemize}
        \item En la entidad \textbf{SistemaMontañoso} hicimos \textbf{Orientación}
              un atributo compuesto por \textbf{Norte}, \textbf{Sur}, \textbf{Este}
@@ -294,6 +323,15 @@
 
 
     \end{itemize}
+<<<<<<< HEAD
+=======
+
+ \begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{./imagenes/Ejercicio2b.jpeg}
+  \end{figure}
+
+>>>>>>> 538d699b5f127129f2bd8ea9717032529d5933b9
 \end{itemize}
 
     \section{Ingeniería inversa}
@@ -317,8 +355,15 @@
         % Ejercicio 1.
         \item ¿Un cliente puede tener un número ilimitado de planes?
 
+<<<<<<< HEAD
 
     \textsc{Solución:} Sí.Como la cardinalidad de la relación es m:n, eso significa que nuestro cliente puede tener varios planes si lo desea.
+=======
+    \textsc{Solución:} Sí. La zona rosa nos dice que hay una relación $1:m$ 
+    donde \textit{un cliente tiene varios tipos de planes} ya que 
+    \textit{Un plan pertence a un tipo de plan}. Entonces, si el 
+    cliente lo desea, puede llegar a tener una infinidad de planes.
+>>>>>>> 538d699b5f127129f2bd8ea9717032529d5933b9
 
     \begin{figure}[h]
         \centering
@@ -328,9 +373,13 @@
     % Ejercicio 2.
     \item ¿Un cliente puede existir sin un plan?
 
+<<<<<<< HEAD
 
     \textsc{Solución:} Sí. La relación \textit{poseer} relaciona las entidades \textit{Cliente} y \textit{Plan} donde la participación de la entidad \textit{Cliente} es parcial, por lo tanto puede existir algún cliente que no posee un plan.
 
+=======
+    \textsc{Solución:} Sí. La relación \textit{poseer} relaciona las entidades \textit{Cliente} y \textit{Plan} donde la participación de la entidad \textit{Cliente} es parcial, por lo tanto puede existir algún cliente que no posee un plan.
+>>>>>>> 538d699b5f127129f2bd8ea9717032529d5933b9
 
     % Ejercicio 3.
     \item ¿Es posible crear un plan sin saber quién es el cliente?
@@ -433,10 +482,15 @@
     difieren.
 
     \textsc{Solución:} La relación \textit{poseer} nos permite asociar a todos los planes con algunos clientes, hay clientes que pueden no poseer un plan pero a todos los planes los posee un cliente, además un mismo cliente puede poseer varios planes y un mismo plan puede ser posesión de varios clientes.
+<<<<<<< HEAD
     La relación \textit{administrar} relaciona a todos los clientes con todos los planes, todos los planes son administrados por un solo cliente y todos los clientes pueden admnistrar varios planes.
 
     La diferencia entre ambas relaciones está en su cardinalidad y la participación de las entidades \textit{Cliente} y \textit{Plan} en cada una.
 
+=======
+La relación \textit{administrar} relaciona a todos los clientes con todos los planes, todos los planes son administrados por un solo cliente y todos los clientes pueden admnistrar varios planes.
+La diferencia entre ambas relaciones está en su cardinalidad y la participación de las entidades \textit{Cliente} y \textit{Plan} en cada una.
+>>>>>>> 538d699b5f127129f2bd8ea9717032529d5933b9
 
     % Ejercicio 11.
     \item Caracterizar el grado y la cardinalidad de la relación que une al

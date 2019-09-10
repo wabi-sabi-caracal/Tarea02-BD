@@ -238,6 +238,62 @@
               elementos. De los satélites se desea almacenar su identificador, 
               nombre y descripción
     \end{itemize}
+
+ \textsc{Solución:}\\
+ Las decisiones y consideraciones que asumimos en nuestro diseño fueron 
+las siguientes: 
+
+- \textbf{Entidades:} 
+\begin{itemize}
+\item En la entidad \textbf{SistemaMontañoso} hicimos \textbf{Orientación} 
+      un atributo compuesto por \textbf{Norte}, \textbf{Sur}, \textbf{Este}
+      y \textbf{Oeste} ya que consideramos a orientación como las coordenadas
+      geografícas.
+\item Para el origen de las montañas utilizamos especialización total debido
+      a que cada entidad en la superentidad \textbf{Origen} debe pertenecer a 
+      una entidad en las subclases (\textbf{Volcánico} y \textbf{plegamiento}), 
+      como no puede haber traslape utilizamos d y agregamos un identificador.      
+\item Para las entidades \textbf{Ríos}, \textbf{Municipios} y \textbf{Satélites}
+      consideramos su identificador como su llave primaria. Para \textbf{SistemaMontañoso}
+      y \textbf{Montaña} consideramos su código como su llave primaria. Y agregamos 
+      los atributos especificados.
+\end{itemize}
+
+- \textbf{Relaciones: } 
+\begin{itemize}
+\item La relación \textbf{Atravesar} es de cardinalidad $n:m$ debido 
+      a que muchos ríos puden pasar por un municipio y que un río puede 
+      pasar por muchos municipios, su participación es total del lado de 
+      Río porque un río debe pasar al menos por un municipio y parcial del 
+      lado de Municipio ya que puede haber municipios por lo que no pasen ríos, 
+      agremos el atributo \textbf{Logitud} ya que se quiere guardar la longitud
+      del tramo del río que pasa por el municipio.
+\item La relación \textbf{Encontrar} es de cardinalidad $n:m$ ya
+      a que muchas montañas se puden encontrar en un municipio y una montaña puede 
+      encontrarse en muchos municipios, su participación es total del lado de 
+     Montaña porque una montaña debe pasar al menos por un municipio y parcial del 
+     lado de Municipio ya que puede haber municipios en los que no se encuentren 
+     montañas. Lo mismo pasa con la relación \textbf{Ocupar}
+
+\item La relación \textbf{Formar} es de cardinalidad $1:n$ debido a que una montaña 
+      solo puede pertener a un sistema montañoso y un sistema montañoso puede estar
+      formado por varias montañas, su participación es total de ambos lados. 
+
+\item La relación \textbf{Tener} es de cardinalidad $1:n$ debido a que una montaña 
+      solo puede tener un origen y un origen puede tener varias montañas, su 
+      participación es total de ambos lados. 
+
+\item La relación \textbf{Monitorear} es de cardinalidad $n:1$ debido a que un 
+      elemento geológico puede ser monitoreado por un satelite y un satelite puede 
+      monitorear varios elementos, su participación es parcial de ambos lados ya que 
+      pueden haber elementos no monitoreados.
+\end{itemize}
+
+ \begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.4]{./imagenes/Ejercicio2b.jpeg}
+  \end{figure}
+
 \end{itemize}
 
 \section{Ingeniería inversa}

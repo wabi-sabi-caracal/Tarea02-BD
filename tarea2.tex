@@ -67,9 +67,13 @@
     ¿Qué implicaría la existencia de una \textbf{entidad} cuyos atributos sean \textbf{todos derivados}? \\
 	\textsc{Solución:} Implicaría que la entidad depende completamente de otras entidades y sus relaciones con ellas.
 
+<<<<<<< HEAD
 
 
     \item[iii.] Explica el concepto de \text{agregación} en el
+=======
+    \item[iii.] Explica el concepto de \text{agregación} en el 
+>>>>>>> 4b661312dd26444f16388ec1610d16278194f33c
     \textbf{modelo E/R} y proporciona un par de ejemplos.
 
     La agregación es una abstracción mediante la cual las relaciones
@@ -294,6 +298,62 @@
 
 
     \end{itemize}
+
+ \textsc{Solución:}\\
+ Las decisiones y consideraciones que asumimos en nuestro diseño fueron 
+las siguientes: 
+
+- \textbf{Entidades:} 
+\begin{itemize}
+\item En la entidad \textbf{SistemaMontañoso} hicimos \textbf{Orientación} 
+      un atributo compuesto por \textbf{Norte}, \textbf{Sur}, \textbf{Este}
+      y \textbf{Oeste} ya que consideramos a orientación como las coordenadas
+      geografícas.
+\item Para el origen de las montañas utilizamos especialización total debido
+      a que cada entidad en la superentidad \textbf{Origen} debe pertenecer a 
+      una entidad en las subclases (\textbf{Volcánico} y \textbf{plegamiento}), 
+      como no puede haber traslape utilizamos d y agregamos un identificador.      
+\item Para las entidades \textbf{Ríos}, \textbf{Municipios} y \textbf{Satélites}
+      consideramos su identificador como su llave primaria. Para \textbf{SistemaMontañoso}
+      y \textbf{Montaña} consideramos su código como su llave primaria. Y agregamos 
+      los atributos especificados.
+\end{itemize}
+
+- \textbf{Relaciones: } 
+\begin{itemize}
+\item La relación \textbf{Atravesar} es de cardinalidad $n:m$ debido 
+      a que muchos ríos puden pasar por un municipio y que un río puede 
+      pasar por muchos municipios, su participación es total del lado de 
+      Río porque un río debe pasar al menos por un municipio y parcial del 
+      lado de Municipio ya que puede haber municipios por lo que no pasen ríos, 
+      agremos el atributo \textbf{Logitud} ya que se quiere guardar la longitud
+      del tramo del río que pasa por el municipio.
+\item La relación \textbf{Encontrar} es de cardinalidad $n:m$ ya
+      a que muchas montañas se puden encontrar en un municipio y una montaña puede 
+      encontrarse en muchos municipios, su participación es total del lado de 
+     Montaña porque una montaña debe pasar al menos por un municipio y parcial del 
+     lado de Municipio ya que puede haber municipios en los que no se encuentren 
+     montañas. Lo mismo pasa con la relación \textbf{Ocupar}
+
+\item La relación \textbf{Formar} es de cardinalidad $1:n$ debido a que una montaña 
+      solo puede pertener a un sistema montañoso y un sistema montañoso puede estar
+      formado por varias montañas, su participación es total de ambos lados. 
+
+\item La relación \textbf{Tener} es de cardinalidad $1:n$ debido a que una montaña 
+      solo puede tener un origen y un origen puede tener varias montañas, su 
+      participación es total de ambos lados. 
+
+\item La relación \textbf{Monitorear} es de cardinalidad $n:1$ debido a que un 
+      elemento geológico puede ser monitoreado por un satelite y un satelite puede 
+      monitorear varios elementos, su participación es parcial de ambos lados ya que 
+      pueden haber elementos no monitoreados.
+\end{itemize}
+
+ \begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.4]{./imagenes/Ejercicio2b.jpeg}
+  \end{figure}
+
 \end{itemize}
 
     \section{Ingeniería inversa}
@@ -318,9 +378,15 @@
         \item ¿Un cliente puede tener un número ilimitado de planes?
 
 
+<<<<<<< HEAD
     \textsc{Solución:} Sí. La zona rosa nos dice que hay una relación $1:m$
     donde \textit{un cliente tiene varios tipos de planes} ya que
     \textit{Un plan pertence a un tipo de plan}. Entonces, si el
+=======
+    \textsc{Solución:} Sí. La zona rosa nos dice que hay una relación $1:m$ 
+    donde \textit{un cliente tiene varios tipos de planes} ya que 
+    \textit{Un plan pertence a un tipo de plan}. Entonces, si el 
+>>>>>>> 4b661312dd26444f16388ec1610d16278194f33c
     cliente lo desea, puede llegar a tener una infinidad de planes.
 
     \begin{figure}[h]
@@ -331,9 +397,13 @@
     % Ejercicio 2.
     \item ¿Un cliente puede existir sin un plan?
 
+<<<<<<< HEAD
 
     \textsc{Solución:} Sí. La relación \textit{poseer} relaciona las entidades \textit{Cliente} y \textit{Plan} donde la participación de la entidad \textit{Cliente} es parcial, por lo tanto puede existir algún cliente que no posee un plan.
 
+=======
+    \textsc{Solución:} Sí. La relación \textit{poseer} relaciona las entidades \textit{Cliente} y \textit{Plan} donde la participación de la entidad \textit{Cliente} es parcial, por lo tanto puede existir algún cliente que no posee un plan.
+>>>>>>> 4b661312dd26444f16388ec1610d16278194f33c
 
     % Ejercicio 3.
     \item ¿Es posible crear un plan sin saber quién es el cliente?
@@ -434,10 +504,15 @@
     difieren.
 
     \textsc{Solución:} La relación \textit{poseer} nos permite asociar a todos los planes con algunos clientes, hay clientes que pueden no poseer un plan pero a todos los planes los posee un cliente, además un mismo cliente puede poseer varios planes y un mismo plan puede ser posesión de varios clientes.
+<<<<<<< HEAD
     La relación \textit{administrar} relaciona a todos los clientes con todos los planes, todos los planes son administrados por un solo cliente y todos los clientes pueden admnistrar varios planes.
 
     La diferencia entre ambas relaciones está en su cardinalidad y la participación de las entidades \textit{Cliente} y \textit{Plan} en cada una.
 
+=======
+La relación \textit{administrar} relaciona a todos los clientes con todos los planes, todos los planes son administrados por un solo cliente y todos los clientes pueden admnistrar varios planes.
+La diferencia entre ambas relaciones está en su cardinalidad y la participación de las entidades \textit{Cliente} y \textit{Plan} en cada una.
+>>>>>>> 4b661312dd26444f16388ec1610d16278194f33c
 
     % Ejercicio 11.
     \item Caracterizar el grado y la cardinalidad de la relación que une al

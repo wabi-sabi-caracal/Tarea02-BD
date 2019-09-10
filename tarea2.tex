@@ -68,7 +68,11 @@
 	\textsc{Solución:} Implicaría que la entidad depende completamente de otras entidades y sus relaciones con ellas.
 
 
+<<<<<<< HEAD
     \item[iii.] Explica el concepto de \text{agregación} en el
+=======
+    \item[iii.] Explica el concepto de \text{agregación} en el 
+>>>>>>> 3b551f4e67b2bb6384589411aff7d81a3c1fd5cf
     \textbf{modelo E/R} y proporciona un par de ejemplos.
 
     La agregación es una abstracción mediante la cual las relaciones
@@ -265,9 +269,15 @@ comportamiento.
     % Ejercicio 1.
     \item ¿Un cliente puede tener un número ilimitado de planes?
 
+<<<<<<< HEAD
     \textsc{Solución:} Sí. La zona rosa nos dice que hay una relación $1:m$
     donde \textit{un cliente tiene varios tipos de planes} ya que
     \textit{Un plan pertence a un tipo de plan}. Entonces, si el
+=======
+    \textsc{Solución:} Sí. La zona rosa nos dice que hay una relación $1:m$ 
+    donde \textit{un cliente tiene varios tipos de planes} ya que 
+    \textit{Un plan pertence a un tipo de plan}. Entonces, si el 
+>>>>>>> 3b551f4e67b2bb6384589411aff7d81a3c1fd5cf
     cliente lo desea, puede llegar a tener una infinidad de planes.
 
     \begin{figure}[h]
@@ -278,10 +288,28 @@ comportamiento.
     % Ejercicio 2.
     \item ¿Un cliente puede existir sin un plan?
 
+<<<<<<< HEAD
     \textsc{Solución:} Sí. La relación \textit{poseer} relaciona las entidades \textit{Cliente} y \textit{Plan} donde la participación de la entidad \textit{Cliente} es parcial, por lo tanto puede existir algún cliente que no posee un plan.
+=======
+    \textsc{Solución:} Sí. La relación \textit{poseer} relaciona las entidades \textit{Cliente} y \textit{Plan} donde la participación de la entidad \textit{Cliente} es parcial, por lo tanto puede existir algún cliente que no posee un plan. 
+>>>>>>> 3b551f4e67b2bb6384589411aff7d81a3c1fd5cf
 
     % Ejercicio 3.
     \item ¿Es posible crear un plan sin saber quién es el cliente?
+    
+    No debido a que la participación de plan es total en las relaciones \textit{poseer} 
+    y \textit{administrar} por lo que \textit{cada plan debe relacionarse con al menos 
+    un cliente}. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{./imagenes/modelo3a.jpg}
+    \end{figure}
+    Para que sea posible crear un plan si saber quién es el cliente la participación
+    de plan debería se parcial.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{./imagenes/modelo3b.jpg}
+    \end{figure}
 
     No debido a que la participación de plan es total en las relaciones \textit{poseer}
     y \textit{administrar} por lo que \textit{cada plan debe relacionarse con al menos
@@ -311,13 +339,21 @@ comportamiento.
     \item ¿Puede un teléfono puede asociar a varios planes?
 
     \textsc{Solución:} No. La entidad \textit{Teléfono} y la entidad \textit{Plan} se asocian con la relación \textit{Incluir} que es una relación uno a muchos, por lo tanto un teléfono está asociado a lo más a un solo plan, pero un plan sí puede estar asociado a muchos teléfonos o a ninguno. Cambiar la cardinalidad de la relación \textit{Incluir} a la de una relación muchos a muchos nos permitiría asociar un teléfono a más de un plan.
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 3b551f4e67b2bb6384589411aff7d81a3c1fd5cf
     % Ejercicio 7.
     \item Supongamos que existe un tipo de teléfono que puede utilizar múltiples
     sistemas operativos. ¿Esta situación podría tener cabida dentro del modelo
     incluido en la figura?
 
+<<<<<<< HEAD
     No, porque la relación \textit{tener} es $n:1$ donde \textit{varios tipos de
+=======
+    No, porque la relación \textit{tener} es $n:1$ donde \textit{varios tipos de 
+>>>>>>> 3b551f4e67b2bb6384589411aff7d81a3c1fd5cf
     telefonos tienen solo un sistema operativo}
 
     \begin{figure}[H]
@@ -325,7 +361,11 @@ comportamiento.
         \includegraphics[scale=0.4]{./imagenes/modelo7a.jpg}
     \end{figure}
 
+<<<<<<< HEAD
     Para que esto ocurra debemos cambiar la cardinalidad de la relación
+=======
+    Para que esto ocurra debemos cambiar la cardinalidad de la relación 
+>>>>>>> 3b551f4e67b2bb6384589411aff7d81a3c1fd5cf
     \textit{tener} de $n:1$ a $n:m$.
     \begin{figure}[H]
         \centering
@@ -365,14 +405,23 @@ comportamiento.
 
     \textsc{Solución:} La relación \textit{poseer} nos permite asociar a todos los planes con algunos clientes, hay clientes que pueden no poseer un plan pero a todos los planes los posee un cliente, además un mismo cliente puede poseer varios planes y un mismo plan puede ser posesión de varios clientes.
 La relación \textit{administrar} relaciona a todos los clientes con todos los planes, todos los planes son administrados por un solo cliente y todos los clientes pueden admnistrar varios planes.
+<<<<<<< HEAD
 La diferencia entre ambas relaciones está en su cardinalidad y la participación de las entidades \textit{Cliente} y \textit{Plan} en cada una.
+=======
+La diferencia entre ambas relaciones está en su cardinalidad y la participación de las entidades \textit{Cliente} y \textit{Plan} en cada una. 
+>>>>>>> 3b551f4e67b2bb6384589411aff7d81a3c1fd5cf
 
     % Ejercicio 11.
     \item Caracterizar el grado y la cardinalidad de la relación que une al
     cliente a sí mismo. Explicar su significado.
 
+<<<<<<< HEAD
     La relación \textit{tener} es de grado 1 (relación reflexiva) y su
     cardinalidad es $1:n$ (uno a muchos).
+=======
+    La relación \textit{tener} es de grado 1 (relación reflexiva) y su 
+    cardinalidad es $1:n$ (uno a muchos). 
+>>>>>>> 3b551f4e67b2bb6384589411aff7d81a3c1fd5cf
 
     \begin{figure}[H]
         \centering
